@@ -1,6 +1,6 @@
 {
   "private": false,
-  "homepage": "https://zwvilli.github.io/villi/",
+  "homepage": "https: //github.com/zwvilli/villi/",
   "author": "zwvilli <1838612269@qq.com>",
   "scripts": {
     "build": "max build",
