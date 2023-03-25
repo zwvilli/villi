@@ -7,7 +7,7 @@ export default defineConfig({
   initialState: {},
   request: {},
   outputPath: 'build',
-  publicPath: 'https://github.com/zwvilli/villi/',
+  publicPath: process.env.NODE_ENV === 'production' ? 'https://github.com/zwvilli/villi/' : '/',
   layout: {
     title: '@umijs/max',
   },
