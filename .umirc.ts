@@ -7,6 +7,7 @@ export default defineConfig({
   initialState: {},
   request: {},
   publicPath: process.env.NODE_ENV === 'production' ? 'https://github.com/zwvilli/villi/' : '/',
+  outputPath: 'build',
   layout: {
     title: '@umijs/max',
   },
@@ -32,4 +33,5 @@ export default defineConfig({
     },
   ],
   npmClient: 'npm',
+  history: { type: 'hash' },
 });
