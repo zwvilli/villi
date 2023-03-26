@@ -1,7 +1,8 @@
 import { defineConfig } from '@umijs/max';
 
 export default defineConfig({
-  antd: {},
+  antd: {
+  },
   access: {},
   model: {},
   initialState: {},
@@ -9,7 +10,7 @@ export default defineConfig({
   publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
   outputPath: 'build',
   layout: {
-    title: '@umijs/max',
+    title: 'Ant Design',
   },
   routes: [
     {
@@ -22,14 +23,34 @@ export default defineConfig({
       component: './Home',
     },
     {
-      name: '权限演示',
-      path: '/access',
-      component: './Access',
-    },
-    {
-      name: ' CRUD 示例',
+      name: ' CRUD',
       path: '/table',
       component: './Table',
+    },
+    {
+      name: ' Test',
+      path: '/test',
+      component: './Test',
+    },
+    {
+      name: ' 学员管理',
+      path: '/stu',
+      routes: [
+        {
+          name: '学员列表',
+          path: '/stu/list',
+          component: './Stu/list'
+        },
+        {
+          name: '新增学员',
+          path: '/stu/pub',
+          component: './Stu/pub'
+        }
+      ]
+    },
+    {
+      path: '/*',
+      component: './404',
     },
   ],
   npmClient: 'npm',
